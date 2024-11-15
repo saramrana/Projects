@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Tesla ID Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="ticket">
+      <!-- Front Side -->
+      <div class="front">
+        <div class="holo"></div>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/2048px-Tesla_Motors.svg.png" alt="Tesla Logo" />
+        <div id="id_number">ID: 00004521</div>
+        <div class="divider"></div>
+      </div>
+
+      <!-- Back Side -->
+      <div class="back">
+        <div class="holo"></div>
+        <div class="data">
+          <div class="name">John Doe</div>
+          <div class="position">Senior Engineer</div>
+          <div class="employee-since">Employee Since: 2022</div>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script>
+    const speed = 3;
+    const ticket = document.querySelector(".ticket");
+
+    const rotationTimeline = gsap.timeline({ repeat: -1, yoyo: true });
+    rotationTimeline.to(ticket, {
+      rotationY: 360,
+      duration: speed,
+      ease: "none"
+    });
+
+    ticket.addEventListener("mouseenter", () => {
+      rotationTimeline.pause();
+    });
+
+    ticket.addEventListener("mouseleave", () => {
+      rotationTimeline.resume();
+    });
+  </script>
+</body>
+</html>
