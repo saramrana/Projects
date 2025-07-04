@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <section>
+      <h1 class="title">Registration Form</h1>
+
+      <form id="form">
+        <div class="input-control">
+          <label for="">Username</label>
+          <input type="text" placeholder="username" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="input-control">
+          <label for="">Email</label>
+          <input type="email" placeholder="info@email.com" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="input-control">
+          <label for="">Password</label>
+          <input type="password" placeholder="password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="input-control">
+          <label for="">Confirm Password</label>
+          <input
+            type="password"
+            placeholder="confirm password"
+            id="confirmpassword" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <button>Submit</button>
+      </form>
+
+      <div class="message hidden">
+        <p>Submitted succesfully!🎉</p>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
