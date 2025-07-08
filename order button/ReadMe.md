@@ -10,7 +10,7 @@
 ### Screenshot
 
 <div align="left">
-<img src="screenshot.png" title="animated Button" alt="animated Button" width="700" height="800"/>
+<img src="screenshot.PNG" title="animated Button" alt="animated Button" width="700" height="800"/>
 </div>
 
 
